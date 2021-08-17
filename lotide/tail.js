@@ -8,9 +8,9 @@ const assertEqual = function(actual, expected) {
 };
 
 // TEST CODE
-const tail = function(arr){
+const tail = function(arr) {
   return arr.slice(1);
-}
+};
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
