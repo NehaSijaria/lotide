@@ -6,12 +6,12 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKeyByValue = function(obj, val) {
+const findKeyByValue = function(showsByGenre, name) {
   let firstKey = '';
   let showName = '';
-  for (let genre of Object.keys(obj)) {
-    showName = obj[genre];
-    if (showName === val) {
+  for (let genre of Object.keys(showsByGenre)) {
+    showName = showsByGenre[genre];
+    if (showName === name) {
       firstKey = genre;
     }
   }
