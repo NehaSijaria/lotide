@@ -1,14 +1,11 @@
-const eqArrays = function (arr1, arr2) {
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) return true;
-};
+const eqArrays = require('./eqArrays');
 
-const assertArraysEqual = function (a1, a2) {
-  if (eqArrays(a1, a2)) {
-    console.log('PASS');
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`✅ Assertion Passed: [${actual}] === [${expected}]`);
   } else {
-    console.log('FAIL');
+    console.log(`🔴 Assertion Failed: [${actual}] !== [${expected}]`);
   }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [1, 3, 2]);
+module.exports = assertArraysEqual;
