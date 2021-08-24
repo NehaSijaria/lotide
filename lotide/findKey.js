@@ -1,10 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Passed`);
-  } else {
-    console.log(`⭕⭕⭕ Failed`);
-  }
-}
 
 const findKey = function(obj, callback) {
   const result = {}
@@ -26,10 +19,13 @@ const keyToFind = {
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
 }
-const result1 = findKey(keyToFind, x => x.stars === 2) // => "noma"
-console.log(result1);
+// const result1 = findKey(keyToFind, x => x.stars === 2) // => "noma"
+// console.log(result1);
 
-assertEqual(findKey(keyToFind, x => x.stars === 1), "noma");
-assertEqual(findKey(keyToFind, x => x.stars === 2), "noma");
-assertEqual(findKey(keyToFind, x => x.stars === 3), "Ora");
-assertEqual(findKey(keyToFind, x => x.stars === 1), "Blue Hill");
+// assertEqual(findKey(keyToFind, x => x.stars === 1), "noma");
+// assertEqual(findKey(keyToFind, x => x.stars === 2), "noma");
+// assertEqual(findKey(keyToFind, x => x.stars === 3), "Ora");
+// assertEqual(findKey(keyToFind, x => x.stars === 1), "Blue Hill");
+
+
+module.exports = findKey;

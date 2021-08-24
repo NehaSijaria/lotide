@@ -1,16 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  // console.log(arr1);
-  // console.log(arr2);
-  if (JSON.stringify(arr1) === JSON.stringify(arr2)) return true;
-};
 
-const assertArraysEqual = function(a1, a2) {
-  if (eqArrays(a1, a2)) {
-    console.log('PASS');
-  } else {
-    console.log('FAIL');
-  }
-};
 const without = function(source, itemsToRemove) {
 
   // assertArraysEqual(source, itemsToRemove);
@@ -34,8 +22,11 @@ const without = function(source, itemsToRemove) {
 
 //without([1, 2, 3], [1]) // => [2, 3]
 //without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
+// assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 //const words = ["hello", "world", "lighthouse"];
 //without(words, ["lighthouse"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 // assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+
+module.exports = without;
